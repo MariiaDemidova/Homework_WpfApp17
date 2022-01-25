@@ -25,7 +25,7 @@ namespace Homework_WpfApp17
                 nameof(Color),
                 typeof(Color),
                 typeof(ColorIndicator),
-                new FrameworkPropertyMetadata(new PropertyChangedCallback(ColorChanged)));
+                new FrameworkPropertyMetadata(Colors.Black, new PropertyChangedCallback(ColorChanged)));
 
         private static void ColorChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {

@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <local:ColorIndicator Margin="171,46,145.6,57"/>
+        <local:ColorIndicator x:Name="Indicator" Margin="171,46,145.6,57" ColorChangedE="ColorIndicator_ColorChangedE"/>
     </Grid>
 </Window>

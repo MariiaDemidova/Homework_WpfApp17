@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Homework_WpfApp17"
              mc:Ignorable="d" Height="317" Width="477">
-    <!--<Viewbox>-->
+    <Viewbox>
     <Grid Height="150" Width="300">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -16,14 +16,23 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Slider x:Name="redSlider" Minimum="0" Maximum="255" Margin="10" Value="{Binding RelativeSource={RelativeSource AncestorType=local:ColorIndicator}, Path=Red}"/>
-        <Slider x:Name="greenSlider" Grid.Row="1" Minimum="0" Maximum="255" Margin="10" Value="{Binding RelativeSource={RelativeSource AncestorType=local:ColorIndicator}, Path=Green}"/>
-        <Slider x:Name="blueSlider" Grid.Row="2" Minimum="0" Maximum="255" Margin="10" Value="{Binding RelativeSource={RelativeSource AncestorType=local:ColorIndicator}, Path=Blue}"/>
-        <Rectangle Grid.Column="1" Grid.RowSpan="3" Width="100" Stroke="Black" Margin="5">
+            <StackPanel>
+                <Label Content="Регулятор красного" FontSize="8" Margin="10,0,0,0"/>
+                <Slider x:Name="redSlider" Minimum="0" Maximum="255" Margin="10,0,10,10" Value="{Binding RelativeSource={RelativeSource AncestorType=local:ColorIndicator}, Path=Red}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Label Content="Регулятор зеленого" FontSize="8" Margin="10,0,0,0"/>
+                <Slider x:Name="greenSlider" Minimum="0" Maximum="255" Margin="10,0,10,10" Value="{Binding RelativeSource={RelativeSource AncestorType=local:ColorIndicator}, Path=Green}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <Label Content="Регулятор синего" FontSize="8" Margin="10,0,0,0"/>
+                <Slider x:Name="blueSlider" Minimum="0" Maximum="255" Margin="10,0,10,10" Value="{Binding RelativeSource={RelativeSource AncestorType=local:ColorIndicator}, Path=Blue}"/>
+            </StackPanel>
+            <Rectangle Grid.Column="1" Grid.RowSpan="3" Width="100" Stroke="Black" Margin="5">
             <Rectangle.Fill>
                 <SolidColorBrush Color="{Binding RelativeSource={RelativeSource AncestorType=local:ColorIndicator}, Path=Color}"/>
             </Rectangle.Fill>
         </Rectangle>
-    </Grid>
-    <!--</Viewbox>-->
+        </Grid>
+    </Viewbox>
 </UserControl>

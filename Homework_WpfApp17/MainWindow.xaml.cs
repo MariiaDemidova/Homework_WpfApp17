@@ -24,5 +24,11 @@ namespace Homework_WpfApp17
         {
             InitializeComponent();
         }
+
+        private void ColorIndicator_ColorChangedE(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        {
+            TextBlock txb = (TextBlock)sender;
+            txb.Text = e.NewValue.ToString();
+        }
     }
 }
